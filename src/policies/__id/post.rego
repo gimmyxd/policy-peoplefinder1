@@ -7,7 +7,3 @@ default enabled = true
 allowed {
    dir.is_manager_of(input.user.id, input.resource.id)
 }
-
-enabled {
-    allowed
-}
