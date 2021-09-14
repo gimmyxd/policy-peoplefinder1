@@ -1,4 +1,4 @@
-package peoplefinder.PUT.api.users.__id
+package peoplefinder.POST.api.users.__id
 
 default allowed = false
 default visible = true
@@ -10,5 +10,9 @@ allowed {
 }
 
 allowed {
-    input.user.id == input.resource.id
+   dir.is_manager_of(input.user.id, input.resource.id)
+}
+
+enabled {
+    allowed
 }
